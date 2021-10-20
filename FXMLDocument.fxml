@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="850.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaodev1.FXMLDocumentController">
+    <children>
+        <LineChart fx:id="virusgrafigi" layoutX="43.0" layoutY="396.0" prefHeight="434.0" prefWidth="943.0">
+        <xAxis> 
+            <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>  
+        <Button fx:id="button" layoutX="610.0" layoutY="29.0" onAction="#getdata" text="Get DATA" />
+        <Label fx:id="label" layoutX="90" layoutY="120" minHeight="16" minWidth="69" />
+      <Label layoutX="41.0" layoutY="33.0" text="Dataset URL:" />
+      <TextField fx:id="urlgetir" layoutX="132.0" layoutY="29.0" prefHeight="26.0" prefWidth="465.0" />
+      <TableView fx:id="tablo" layoutX="60.0" layoutY="71.0" prefHeight="312.0" prefWidth="959.0">
+        <columns>
+          <TableColumn fx:id="ulkekolon" prefWidth="125.0" text="ULKE" />
+          <TableColumn fx:id="topvakakolon" prefWidth="125.0" text="Toplam Vaka" />
+          <TableColumn fx:id="vakakolon" prefWidth="95.0" text="Yeni Vaka" />
+          <TableColumn fx:id="topolukolon" prefWidth="125.0" text="Toplam Ölü" />
+          <TableColumn fx:id="olukolon" prefWidth="95.0" text="Yeni Ölü" />
+          <TableColumn fx:id="nufuskolon" prefWidth="130.0" text="Nüfus" />
+          <TableColumn fx:id="olumorankolon" prefWidth="125.0" text="Ölüm Oranı" />
+          <TableColumn fx:id="saldirikolon" prefWidth="125.0" text="Saldırı Hızı" />
+        </columns>
+      </TableView>
+      <Button fx:id="button1" layoutX="732.0" layoutY="29.0" mnemonicParsing="false" onAction="#grafik1" text="Seçilen Ülkeleri Göster" />
+      <Button layoutX="939.0" layoutY="29.0" mnemonicParsing="false" onAction="#grafik2" text="KITALAR" />
+      
+      
+    </children>
+</AnchorPane>
